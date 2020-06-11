@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Todos</title>
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <header class="text-center my-4 text-light">
+            <h1 class="mb-4">Todo List</h1>
+            <form class="search">
+                <input type="text" class="form-control" name="search" placeholder="Search Todos">
+            </form>
+        </header>
+        
+        <ul class="list-group todos mx-auto text-light">
+            
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Add Font Awesome Trash Can</span>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Program the Javascript</span>
+                <i class="fa fa-trash delete" aria-hidden="true"></i>
+            </li>
+            
+        </ul>
+        
+        <form  class="add text-center my-4">
+            <label class="text-light"> Add a new todo...</label>
+            <input type="text" class="form-control m-auto" name="add">
+        </form>
+        
+    </div>
+    
+</body>
+
+    <script src="app.js"></script>
+</html>
