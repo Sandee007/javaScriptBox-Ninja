@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Database</title>
+</head>
+<body>
+    <!-- <h1>Firebase Database</h1> -->
+
+    <div class="container my-5">
+        <h2>Recipes</h2>
+        <ul>
+            <li> 
+                <div>${title}</div>
+                <div>${created_at}</div>
+                <button class="btn btn-danger btn-sm my-2">delete</button>
+            </li>
+        </ul>
+        <form action="">
+            <label for="recipe">Add a new recipe</label>
+            <div class="input-group">
+                <input type="text"  id="recipe" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" value="add" class="btn btn-outline-secondary">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <table class="table">
+        <tr>
+            <td>
+                <h1 title="dah title"> Title</h1>
+                <h2>dfdffd</h2>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        const table = document.querySelector('.table');
+        table.addEventListener("click", e =>{
+            console.log(e.target);
+        })
+    </script>
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script> -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBoXufitZu22npN_udXAQvGwTCvF30XlWg",
+        authDomain: "project-one-323a5.firebaseapp.com",
+        databaseURL: "https://project-one-323a5.firebaseio.com",
+        projectId: "project-one-323a5",
+        storageBucket: "project-one-323a5.appspot.com",
+        messagingSenderId: "104213775263",
+        appId: "1:104213775263:web:8bae13364edfa15e8473aa",
+        measurementId: "G-N0BT5E8RLS"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    // firebase.analytics();
+    </script>
+
+    <script src="sandbox.js"></script>
+</body>
+</html>

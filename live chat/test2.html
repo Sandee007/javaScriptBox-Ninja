@@ -1,0 +1,507 @@
+<html>
+    <html>
+    <head>
+        <title>Blood Donation</title>
+        
+        <link rel="stylesheet" type="text/css" href="Blood%20request.css">
+        <link rel="stylesheet" type="text/css" href="What%20Happens%20to%20Donated%20Blood.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        
+    </head>
+    
+    <body>
+       
+        <!------------------------------------------------------NavigationBar-------------------------------------------------->
+        
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="img/Rounded_Cornor%20Image%201_Dimentioned.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Give Blood</a>
+               
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="#">First Time Blood Donors</a>
+                   <a class="dropdown-item" href="#">What to Do Before,During and After</a>
+                   <a class="dropdown-item" href="#">Eligibility Requirments</a>
+                   <a class="dropdown-item" href="#">Types of Blood Donations</a>
+                   <a class="dropdown-item" href="#">How Blood Donation Help</a>
+                   <a class="dropdown-item" href="#">What Happens to Donated Blood</a>
+                   <a class="dropdown-item" href="#">Find a Blood Camp</a>
+                </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+               
+                <a class="nav-link" href="#">Become a Volunteer</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+               
+                <a class="nav-link" href="#">Blood Request</a>
+            </li>
+            
+            <li class="nav-item">
+                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">My Account</a>
+             </li>
+        </ul>
+        
+        </div>
+        </nav>
+        </section>
+        
+        <!-----------------------------------------------blood donor information------------------------------------------------------------>
+        <section id="donor_infromation">
+            <div class="container">
+                <h1>blood request form</h1>
+                  <!------------FIRST LIST-------------->
+                   <h2>Patient Details</h2>
+                   <form action="bloodrequest.php" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                                <div class="contact-form">
+                                    <div class="form-group">
+                                        <input type="text" name="surname" class="form-control" placeholder="Surname">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="fname" class="form-control" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="file_number" class="form-control" placeholder="Patient File Number">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <p>Gender</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="radio" id="male" name="gender" value="male">
+                                                <label for="male">Male</label>
+                                                <input type="radio" id="female" name="gender" value="female">
+                                                <label for="female">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                        
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-form">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Date of Birthday </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <input type="date" name="dob" class="form-control" placeholder="DoB">
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <input type="text" name="idcard" class="form-control" placeholder="ID Card Number">
+                                </div>
+                                <div class="form-group">
+                                        <input type="text" name="ward" class="form-control" placeholder="Ward">
+                                    </div>
+                            </div>
+                            
+                        </div>
+                    </div><!---------FIRST LIST END--------->
+                    
+                    
+                    <!-------------SECOND LIST--------------->
+                    <h2>History</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="contact-form">
+                                        <p>Previous pregnancies</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="radio" id="yes" name="pregnancies" value="yes">
+                                        <label for="yes">Yes</label>
+                                        <input type="radio" id="no" name="pregnancies" value="no">
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mg-b-pro-edt">
+                            <!---Blood Group Selcet--->
+                                <select name="blood_group" class="form-control pro-edt-select form-control-primary">
+				                    <option value="opt1">Select Blood Group</option>
+								    <option value="opt2">O+</option>
+								    <option value="opt3">O-</option>
+				                    <option value="opt4">A+</option>
+									<option value="opt5">A-</option>
+                                    <option value="opt6">B+</option>
+                                    <option value="opt3">B-</option>
+                                    <option value="opt4">AB+</option>
+                                    <option value="opt5">AB-</option>						
+				                </select><!---Blood Group Selcet END--->
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="contact-form">
+                                        <p>Previous transfusions</p>
+                                    </div>    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="radio" id="yes" name="transfusions" value="yes">
+                                        <label for="yes">Yes</label>
+                                        <input type="radio" id="no" name="transfusions" value="no">
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="contact-form">
+                                        <p>Previous reactions</p>
+                                    </div>    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="radio" id="yes" name="reaction" value="yes">
+                                        <label for="yes">Yes</label>
+                                        <input type="radio" id="no" name="reaction" value="no">
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" name="reason" rows="2" placeholder="Reason for transfusion"></textarea>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                    <h2>Request</h2>
+                        <div class="row">
+                           <!----FIRST SET---->
+                           
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="radio"  name="request_type" value="em">
+                                        <label for="em">Emergency</label>   
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>(Immediately)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="radio" name="request_type"  value="urg">
+                                        <label for="urg">Urgent</label>   
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>(within 1 hour)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="radio" name="request_type"  value="stan">
+                                        <label for="stan">Standard</label>   
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>(within 12 hour)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="radio" name="request_type" value="gas">
+                                        <label for="gas">Group and Save</label>   
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>(within 7 days)</p>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            
+                            <!----FIRST SET END---->
+                            
+                            <!----SECOND SET---->
+                            <div class="col-md-6">
+                                <div class="contact-form">
+                                    
+                                
+                                    <div class="form-group">
+                                        <input type="text" name="units" class="form-control" placeholder="Units">
+                                    </div>
+                                    
+                                    <div class="input-group mg-b-pro-edt">
+                                        <!---Blood Group Selcet--->
+                                        <select name="blood_type" class="form-control pro-edt-select form-control-primary">
+				                            <option value="opt1">Select Blood Type</option>
+								            <option value="opt2">Packed red cells</option>
+								            <option value="opt3">FFP</option>
+				                            <option value="opt4">Platelets</option>
+									        <option value="opt5">Cryoprecipitate</option>
+                                            <option value="opt6">Whole blood</option>					
+				                        </select><!---Blood Group Selcet END--->
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                                
+                    </div>
+                
+                            <!----SECOND SET END---->
+                        
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                               <div class="row">
+                                   <div class="col-md-3">
+                                       <p>Date required</p>
+                                   </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <input type="date" name="date_required" class="form-control" placeholder="Date required">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" name="doctor_name" class="form-control" placeholder="Name of doctor">
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Date of request</p>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="date" name="date_request" class="form-control" placeholder="Date of request">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Time required</p>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <input type="time" name="time_required" class="form-control" placeholder="Time required">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" name="doctor_tp" class="form-control" placeholder="Doctor mobile number">
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Tme of request</p>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="time" name="time_request" class="form-control" placeholder="Time of request">
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                           <div class="col-md-12">
+                            <button type="submit" name="submit" value="submit" class="btn btn-primary btn-lg btn-block">REQUEST</button>
+                            </div>
+                       </div>
+                </form>
+            </div>
+        </section>
+        
+        <!-----------------------------------------------FOOTER------------------------------------------------------------> 
+      <footer>            
+            <section class="footer-widget-area footer-widget-area-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="about-footer">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                        <img src="images/logo-footer.png" alt="" />
+                                    </div> 
+                                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                                        <p>
+                                            We are world largest and trustful blood donation center. We have been working since 1973 with a prestigious vision to helping patient to provide blood.
+                                            We are working all over the world, organizing blood donation campaign to grow awareness among the people to donate blood.
+                                        </p>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+                    </div> 
+                    <div class="row"> 						                      
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="footer-widget">
+                                <div class="sidebar-widget-wrapper">
+                                    <div class="footer-widget-header clearfix">
+                                        <h3>Contact Us</h3>
+                                    </div> 
+                                    <div class="textwidget">                                       
+                                        <i class="fa fa-envelope-o fa-contact"></i> <p><a href="#">support@donation.com</a><br/><a href="#">helpme@donation.com</a></p>
+                                        <i class="fa fa-location-arrow fa-contact"></i> <p>Road-2,3/A ahawal place<br/>Colombo 1</p>
+                                        <i class="fa fa-phone fa-contact"></i> <p>Office:&nbsp; (021) 1210 101 <br/>Cell:&nbsp; (071) 1450 101</p>                              
+                                    </div>
+                                </div> 
+                            </div> 
+                        </div>  
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="footer-widget clearfix">
+                                <div class="sidebar-widget-wrapper">
+                                    <div class="footer-widget-header clearfix">
+                                        <h3>OUR BLOOD BANKS </h3>
+                                    </div>
+                                    <ul class="footer-useful-links">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Colombo 1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Anuradhapura
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Colombo 5 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Kurunagala
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Gampaha
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                kaluthara 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Mathara
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Kandy
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Vavuniya
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                Ratnapura
+                                            </a>
+                                        </li>                                       
+                                    </ul>
+                                </div>        
+                            </div>             
+                        </div>     
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="footer-widget">
+                                <div class="sidebar-widget-wrapper">
+                                    <div class="footer-widget-header clearfix">
+                                        <h3>our vision</h3>
+                                    </div>
+                                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffd
+                                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                    ssssssssssssssssssssssssssssssssssssssssssaa</p>
+                                    <!--------------<div class="footer-subscription">
+                                        <p>
+                                        
+                                            <input type="text" name="user_name" placeholder="Name" > 
+                                        </p>
+                                        <p class = "inline">
+                                           
+                                            <input type="text" name="city" placeholder="City">
+                                        </p> 
+                                        <p>
+                                            <input type="text" name="comment" id="mc4wp_comment" placeholder="Enter your comment" class="form-control">
+                                        </p>
+                                        <p>
+                                            <input class="btn btn-default" value="Submit" type="submit">
+                                        </p>
+                                    </div>-------------------------->
+                                </div>
+                            </div>
+                        </div>  
+                    </div> 
+                </div>
+            </section> 
+            <section class="footer-contents">
+                <div class="container">
+                    <div class="row clearfix"> 
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <p class="copyright-text"> Copyright 2020 - Blood Bank All Rights Reserved. </p>
+                        </div>  
+                    </div>                                     
+                </div> 
+            </section>
+        </footer>
+
+       
+       
+        </body>
+</html>       
+      
+     
